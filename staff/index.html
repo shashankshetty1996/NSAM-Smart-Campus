@@ -24,7 +24,7 @@
   <!-- define angular controller -->
   <body ng-controller="mainController">
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">NSAM First Grade College</a>
@@ -36,7 +36,7 @@
       </div>
     </nav>
 
-    <div>
+    <div style="margin-top:5rem;">
       <div class="container-fluid">
               <div class="row">
                   <div class="col-sm-3 col-md-2 sidebar">
@@ -46,14 +46,14 @@
                           <hr />
                       </div>
                       <ul class="nav nav-sidebar">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#subject">Subjects</a></li>
-                          <li><a href="#attendance">Attendance Entry</a></li>
-                          <li><a href="#view">View Attendance</a></li>
-                          <li><a href="#report">Attendance Report</a></li>
+                          <li id="homeBtn"><a href="#">Home</a></li>
+                          <li id="subjectBtn"><a href="#subject">Subjects</a></li>
+                          <li id="attendanceBtn"><a href="#attendance">Attendance Entry</a></li>
+                          <li id="viewBtn"><a href="#view">View Attendance</a></li>
+                          <li id="reportBtn"><a href="#report">Attendance Report</a></li>
                       </ul>
                   </div>
-                  <div class="col-sm-9 col-md-10 col-md-offset-2 col-sm-offset-3 main">
+                  <div class="col-sm-8 col-md-9 col-md-offset-2 col-sm-offset-3 main">
                       <h1 class="page-header">NSAM First Grade College</h1>
                       <div ng-view></div>
                   </div>

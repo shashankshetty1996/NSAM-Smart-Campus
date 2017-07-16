@@ -36,6 +36,20 @@
 			});
 	});
 
+
+	app.factory('LoginFactory', ['$http', function ($http) {
+		var id='st001';
+		var name='Teacher1';
+		// $http.get('pages/php/getcred.php').success(function (d){
+		// 	id = d[0];
+		// 	name = d[1];
+		// });
+		return {
+			getID: id,
+			getName: name
+		};
+	}]);
+
 	// all the controllers are in js/controllers folders
 
 	// create the controller and inject Angular's $scope
@@ -57,4 +71,9 @@
 
 	// app.controller('reportController', function($scope) {
 	// 	$scope.message = 'Generate Report.';
+	// });
+
+	// document.getElementById('homeBtn')
+	// .addEventListener("click", function() {
+    // 	profileInit();
 	// });
