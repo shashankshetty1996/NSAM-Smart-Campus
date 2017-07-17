@@ -1,5 +1,5 @@
 <?php 
-    $connect = mysqli_connect("localhost","root","","mydb");
+    $connect = mysqli_connect("localhost","root","","myserver");
     $output=array();
     $data = json_decode(file_get_contents("php://input"));
     if(count($data) > 0){
