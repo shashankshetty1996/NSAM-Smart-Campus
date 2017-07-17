@@ -1,11 +1,8 @@
 angular.module('myApp').controller('mainController', function($scope, $http, LoginFactory) {
     $scope.message = LoginFactory.getID;
-    console.log($scope.message);
     $scope.init = function() {
         $scope.message = "ID working now checking init"
-        console.log("inside profileInit");
         $http.get("pages/php/staff.php",{'sid':$scope.message}).success(function(data) {
-            console.log(data);
             if(data == ""){
                 // dummie data set
                 $scope.staffDetails = [{
@@ -25,5 +22,6 @@ angular.module('myApp').controller('mainController', function($scope, $http, Log
             }
         });
     }
+    // calling ng-init function
     $scope.init();
 });
